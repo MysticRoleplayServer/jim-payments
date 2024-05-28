@@ -8,7 +8,7 @@ Config = {
 	Lan = "en",
 	Debug = false,
 	Notify = "qb",		-- "qb" | "okok" | "t" | "infinity" | "rr"
-	Menu = "ox",
+	Menu = "qb",
 
 	---------------------------------
 	-- Default Job Payment Systems --
@@ -21,7 +21,7 @@ Config = {
 								-- "fd" 			- currently default supported
 								-- "okok"			- make sure to add societies to Config.Societies in okokBanking, This is for the latest QBCore updates
 
-	ApGov = false, -- Toggle support for AP-Goverment Tax
+	ApGov = true, -- Toggle support for AP-Goverment Tax
 
 	List = true, -- "true" to use nearby player list feature in the cash registers, "false" for manual id entry
 	PaymentRadius = 15, -- This is how far the playerlist will check for nearby players (based on the person charging)
@@ -58,7 +58,7 @@ Config = {
 	CashInLocation = vector4(252.23, 223.11, 106.29, 159.2), -- Default Third Window along in Pacific Bank
 
 	TicketSystem = true, -- Enable this if you want to use the ticket system false
-	TicketSystemAll = true, -- Enable this to give tickets to all workers clocked in
+	TicketSystemAll = false, -- Enable this to give tickets to all workers clocked in
 
 	Commission = true, -- Set this to true to enable Commissions and give the person charging a percentage of the total
 	CommissionAll = false, -- Set this to true to give commission to workers clocked in
@@ -71,36 +71,57 @@ Config = {
 	-- Commission is a percentage eg "0.10" becomes 10%
 	Jobs = {
 		-- Jim Businesses | https://jimathy666.tebex.io/
-		['bakery'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
-		['beanmachine'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
-		['burgershot'] = { MinAmountforTicket = 50, PayPerTicket = 50 , Commission = 0.10, },
-		['catcafe'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
-		['henhouse'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
-		['pizzathis'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
-		['popsdiner'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
 		['tequilala'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
 		['vanilla'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
 		['upnatom'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
 		['hornys'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
+		['beanmachine'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
+		['burgershot'] = { MinAmountforTicket = 50, PayPerTicket = 50 , Commission = 0.10, },
+		-- ['catcafe'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
+		-- ['pizzathis'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
+		-- ['popsdiner'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
 
 		-- JixelTay Businesses | https://jixeltay.tebex.io/
-		['cigarbar'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
-		['cluckinbell'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
-		['smokeshop'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
-		['pearls'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
-		['kois'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
 		['whitewidow'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
 		['bestbuds'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
 
 		-- Jim Mechanic | https://jimathy666.tebex.io/
 		['mechanic'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
-		['tuners'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
-		['ottos'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
-		['lscustoms'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['sadot'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['redline'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['eastcustoms'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['hayesautos'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
 		['bennys'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['beekers'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['altabennys'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['lscustoms'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['lscustoms68'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['lstuner'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['lscustomsairport'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['lscustomsps'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['ottos'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['hayesautos2'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
 
 		-- Gangs | Example of a gang being supported
-		['lostmc'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, gang = true, },
+		-- ['lostmc'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, gang = true, },
+
+		-- Other Jobs
+		['cityhall'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['judge'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['lawyer'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['cardealer'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['realestate'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['sandybs'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['mirrorparkbs'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['insurance'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['bahama'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['yellowjack'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		['cyberbar'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		-- ['casino'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		-- ['insertcoin'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		-- ['irishpub'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		-- ['limeys'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
+		-- ['splitsides'] = { MinAmountforTicket = 1000, PayPerTicket = 500, Commission = 0.10, },
 	},
 
 	------------------------------
@@ -120,6 +141,9 @@ Config = {
 	FineJobs = {
 		['police'] = { Commission = 0.25, },
 		['ambulance'] = { Commission = 0.25, },
+		['sasp'] = { Commission = 0.25, },
+		['sapr'] = { Commission = 0.25, },
+		['bcso'] = { Commission = 0.25, },
 	},
 	FineJobConfirmation = false, --"true" makes it so fines need confirmation, "false" skips this ands just removes the money
 	FineJobList = true, -- "true" to use nearby player list feature in the cash registers, "false" for manual id entry
