@@ -16,7 +16,7 @@ end)
 
 CreateThread(function()
     if Config.Enablecommand then
-        QBCore.Commands.Add("cashregister", Loc[Config.Lan].command["cash_reg"], {}, false, function(source) TriggerClientEvent("jim-payments:client:Charge", source, {}, true) end)
+        QBCore.Commands.Add("bill", Loc[Config.Lan].command["cash_reg"], {}, false, function(source) TriggerClientEvent("jim-payments:client:Charge", source, {}, true) end)
     end
 end)
 
